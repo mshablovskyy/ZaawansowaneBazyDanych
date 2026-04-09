@@ -1,0 +1,2 @@
+﻿CREATE USER [237161@student.uek.krakow.pl] FOR EXTERNAL PROVIDER;
+

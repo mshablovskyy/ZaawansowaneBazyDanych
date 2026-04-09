@@ -1,0 +1,86 @@
+30/03/2026 17:50:26	This log contains information about the import schema operation into project 'ZaawansowaneBazyDanych' on computer 'MAKSYMSHABLABA0' by user 'mshablovskyy'.
+30/03/2026 17:50:26	Import of database schema has started.
+30/03/2026 17:50:27	Gathering logins
+30/03/2026 17:50:34	Gathering database credentials
+30/03/2026 17:50:34	Gathering database options
+30/03/2026 17:50:34	Gathering generic database scoped configuration option
+30/03/2026 17:50:34	Gathering users
+30/03/2026 17:50:34	Gathering roles
+30/03/2026 17:50:34	Gathering application roles
+30/03/2026 17:50:34	Gathering role memberships
+30/03/2026 17:50:34	Gathering filegroups
+30/03/2026 17:50:34	Gathering full-text catalogs
+30/03/2026 17:50:34	Gathering assemblies
+30/03/2026 17:50:34	Gathering certificates
+30/03/2026 17:50:34	Gathering symmetric keys
+30/03/2026 17:50:34	Gathering encrypted symmetric keys
+30/03/2026 17:50:34	Gathering schemas
+30/03/2026 17:50:34	Gathering XML schema collections
+30/03/2026 17:50:34	Gathering user-defined data types
+30/03/2026 17:50:34	Gathering user-defined types
+30/03/2026 17:50:34	Gathering table types
+30/03/2026 17:50:34	Gathering unique keys for table types
+30/03/2026 17:50:34	Gathering primary keys for table types
+30/03/2026 17:50:34	Gathering indexes for table types
+30/03/2026 17:50:34	Gathering check constraints for table types
+30/03/2026 17:50:34	Gathering default constraints for table types
+30/03/2026 17:50:34	Gathering partition functions
+30/03/2026 17:50:34	Gathering partition schemes
+30/03/2026 17:50:34	Gathering functions
+30/03/2026 17:50:34	Gathering encrypted functions
+30/03/2026 17:50:34	Gathering aggregates
+30/03/2026 17:50:34	Gathering procedures
+30/03/2026 17:50:34	Gathering encrypted procedures
+30/03/2026 17:50:34	Gathering tables
+30/03/2026 17:50:34	Gathering primary keys
+30/03/2026 17:50:34	Gathering unique constraints
+30/03/2026 17:50:34	Gathering foreign keys
+30/03/2026 17:50:34	Gathering default constraints
+30/03/2026 17:50:34	Gathering check constraints
+30/03/2026 17:50:34	Gathering views
+30/03/2026 17:50:34	Gathering encrypted views
+30/03/2026 17:50:34	Gathering indexes
+30/03/2026 17:50:34	Gathering statistics
+30/03/2026 17:50:34	Gathering full-text index stoplists
+30/03/2026 17:50:34	Gathering search property lists
+30/03/2026 17:50:34	Gathering search properties
+30/03/2026 17:50:34	Gathering full-text indexes
+30/03/2026 17:50:34	Gathering column store indexes
+30/03/2026 17:50:34	Gathering spatial indexes
+30/03/2026 17:50:34	Gathering XML indexes
+30/03/2026 17:50:34	Gathering Selective XML indexes
+30/03/2026 17:50:34	Gathering encrypted triggers
+30/03/2026 17:50:34	Gathering triggers
+30/03/2026 17:50:34	Gathering encrypted and clr ddl triggers
+30/03/2026 17:50:34	Gathering ddl triggers
+30/03/2026 17:50:34	Creating edge constraints
+30/03/2026 17:50:34	Gathering synonyms
+30/03/2026 17:50:34	Gathering defaults
+30/03/2026 17:50:34	Gathering data constraint uddt bindings
+30/03/2026 17:50:34	Gathering rules
+30/03/2026 17:50:34	Gathering data constraint uddt bindings
+30/03/2026 17:50:34	Gathering message types
+30/03/2026 17:50:34	Gathering queues
+30/03/2026 17:50:34	Gathering contracts
+30/03/2026 17:50:34	Gathering services
+30/03/2026 17:50:34	Gathering event notifications
+30/03/2026 17:50:34	Gathering remote service bindings
+30/03/2026 17:50:34	Gathering broker priorities
+30/03/2026 17:50:34	Gathering signatures
+30/03/2026 17:50:34	Gathering compression options
+30/03/2026 17:50:34	Gathering sequence types
+30/03/2026 17:50:34	Gathering security policies
+30/03/2026 17:50:34	Gather column encryption keys
+30/03/2026 17:50:34	Gathering column master keys
+30/03/2026 17:50:34	Gathering external data sources
+30/03/2026 17:50:34	Gathering external file formats
+30/03/2026 17:50:34	Gathering external tables
+30/03/2026 17:50:34	Gathering XML index compression options
+30/03/2026 17:50:34	Gathering extended properties
+30/03/2026 17:50:34	Gathering assemblies
+30/03/2026 17:50:34	Gathering logins
+30/03/2026 17:50:35	Scanning project for duplicate elements
+30/03/2026 17:50:35	Finished duplicate element processing
+30/03/2026 17:50:37	Finished importing database.
+30/03/2026 17:50:37	A summary of the import was saved to the following location: Z:\University\year2\SQL\GitFolder\ZaawansowaneBazyDanych\ZaawansowaneBazyDanych\Import Schema Logs\ZaawansowaneBazyDany_20260330035026.log
+30/03/2026 17:50:37	Click Finish to continue...
