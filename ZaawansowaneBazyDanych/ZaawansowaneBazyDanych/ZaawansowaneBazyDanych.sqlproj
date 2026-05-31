@@ -74,13 +74,48 @@
     <Folder Include="SalesLT\Sequences\" />
   </ItemGroup>
   <ItemGroup>
+    <Build Include="237161\Tables\CustomerHistory.sql" />
+    <Build Include="DatabaseTriggers\trg_DatabaseAuditDDL.sql" />
+    <Build Include="dbo\Functions\fn_Customer_NotExists.sql" />
+    <Build Include="dbo\Functions\fn_GetCustomerCreditRisk.sql" />
+    <Build Include="dbo\Functions\ufn_GetBestFromYOrder.sql" />
     <Build Include="dbo\Tables\BuildVersion.sql" />
+    <Build Include="dbo\Tables\DatabaseAuditLog.sql" />
     <Build Include="dbo\Tables\ErrorLog.sql" />
+    <Build Include="dbo\Tables\TopProducts.sql" />
+    <Build Include="dbo\UserDefinedTypes\M1_surname.sql" />
+    <Build Include="dbo\Views\237161_order.sql" />
+    <Build Include="dbo\Views\v_DoubleView.sql" />
+    <Build Include="SalesLT\Functions\ufn_GetBestOrderRecordId.sql" />
+    <Build Include="SalesLT\StoredProcedures\AddNewProduct.sql" />
+    <Build Include="SalesLT\StoredProcedures\Customer_Get.sql" />
+    <Build Include="SalesLT\StoredProcedures\Customer_Insert.sql" />
+    <Build Include="SalesLT\StoredProcedures\Customer_Insert_Task4.sql" />
+    <Build Include="SalesLT\StoredProcedures\Customer_Update.sql" />
     <Build Include="SalesLT\Tables\Address.sql" />
     <Build Include="237161\Tables\CustomerAddress.sql" />
+    <Build Include="SalesLT\Tables\DeletedCustomersLog.sql" />
+    <Build Include="SalesLT\Tables\Lab8Task6Categories.sql" />
+    <Build Include="SalesLT\Tables\ProductAttribute.sql" />
+    <Build Include="SalesLT\Tables\ProductPriceHistory.sql" />
+    <Build Include="SalesLT\Tables\ProductPriceIncreaseLog.sql" />
     <Build Include="SalesLT\Tables\SalesOrderDetail.sql" />
     <Build Include="SalesLT\Tables\SalesOrderHeader.sql" />
     <Build Include="SalesLT\Tables\CustomerComplaint.sql" />
+    <Build Include="SalesLT\Views\v_ProductPriceComparison.sql" />
+    <Build Include="SalesLT\XMLSchemaCollections\ProductAttributeSchema.sql" />
+    <Build Include="Student_1\Functions\ufn_CalcAdjustedPrices.sql" />
+    <Build Include="Student_1\Functions\ufn_CheckProductsPrice.sql" />
+    <Build Include="Student_1\Functions\ufn_GetBestYOrderId.sql" />
+    <Build Include="Student_1\Functions\ufn_IsPriceHigherThanCurrent.sql" />
+    <Build Include="Student_1\Functions\ufn_ItemsBelowReorderPoint.sql" />
+    <Build Include="Student_1\Functions\ufn_ProductsJsonByCategory.sql" />
+    <Build Include="Student_1\Functions\ufn_ReorderProposal.sql" />
+    <Build Include="Student_1\Functions\ufn_StockStatusLabel.sql" />
+    <Build Include="Student_1\StoredProcedures\ProcessTopProducts.sql" />
+    <Build Include="Student_1\Tables\ExamResult.sql" />
+    <Build Include="Student_1\Tables\Item.sql" />
+    <Build Include="Student_1\Tables\MonthlySales.sql" />
     <Build Include="Student_1\Tables\ProduktyM.sql" />
     <Build Include="dbo\Tables\ProductsCategories237161.sql" />
     <Build Include="237161\Tables\Customer.sql" />
@@ -113,6 +148,11 @@
     <Build Include="Security\SalesLT.sql" />
     <Build Include="Security\Student_1.sql" />
     <Build Include="SalesLT\Sequences\SalesOrderNumber.sql" />
+    <Build Include="Student_1\Tables\RegionalSales.sql" />
+    <Build Include="Student_1\Tables\StockMovement.sql" />
+    <Build Include="Student_1\Views\MyLogicView.sql" />
+    <Build Include="Student_1\Views\v_CurrentStock.sql" />
+    <Build Include="Student_1\Views\v_LatestCustomers.sql" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Condition="'$(NetCoreBuild)' == 'true'">

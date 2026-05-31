@@ -1,4 +1,4 @@
-﻿CREATE TABLE [SalesLT].[Product] (
+CREATE TABLE [SalesLT].[Product] (
     [ProductID]              INT              IDENTITY (1, 1) NOT NULL,
     [Name]                   [dbo].[Name]     NOT NULL,
     [ProductNumber]          NVARCHAR (25)    NOT NULL,
@@ -27,4 +27,75 @@
     CONSTRAINT [AK_Product_ProductNumber] UNIQUE NONCLUSTERED ([ProductNumber] ASC),
     CONSTRAINT [AK_Product_rowguid] UNIQUE NONCLUSTERED ([rowguid] ASC)
 );
+
+
+GO
+
+CREATE   TRIGGER SalesLT.trg_Product_BlockBigPriceIncrease
+ON SalesLT.Product
+INSTEAD OF UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF EXISTS (
+        SELECT 1
+        FROM inserted i
+        JOIN deleted d ON i.ProductID = d.ProductID
+        WHERE i.ListPrice > d.ListPrice * 1.2
+    )
+    BEGIN
+        INSERT INTO SalesLT.ProductPriceIncreaseLog (ProductID, OldPrice, NewPrice)
+        SELECT
+            i.ProductID,
+            d.ListPrice,
+            i.ListPrice
+        FROM inserted i
+        JOIN deleted d ON i.ProductID = d.ProductID
+        WHERE i.ListPrice > d.ListPrice * 1.2;
+        RETURN;
+    END;
+
+    UPDATE p
+    SET
+        p.Name = i.Name,
+        p.ProductNumber = i.ProductNumber,
+        p.Color = i.Color,
+        p.StandardCost = i.StandardCost,
+        p.ListPrice = i.ListPrice,
+        p.Size = i.Size,
+        p.Weight = i.Weight,
+        p.ProductCategoryID = i.ProductCategoryID,
+        p.ProductModelID = i.ProductModelID,
+        p.SellStartDate = i.SellStartDate,
+        p.SellEndDate = i.SellEndDate,
+        p.DiscontinuedDate = i.DiscontinuedDate,
+        p.ThumbNailPhoto = i.ThumbNailPhoto,
+        p.ThumbnailPhotoFileName = i.ThumbnailPhotoFileName,
+        p.rowguid = i.rowguid,
+        p.ModifiedDate = i.ModifiedDate
+    FROM SalesLT.Product p
+    JOIN inserted i ON p.ProductID = i.ProductID;
+END;
+GO
+
+
+
+CREATE   TRIGGER SalesLT.trg_Product_PriceChange
+ON SalesLT.Product
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO SalesLT.ProductPriceHistory (ProductID, OldPrice, NewPrice)
+    SELECT
+        i.ProductID,
+        d.ListPrice AS OldPrice,
+        i.ListPrice AS NewPrice
+    FROM inserted i
+    JOIN deleted d ON i.ProductID = d.ProductID
+    WHERE ISNULL(d.ListPrice, -1) <> ISNULL(i.ListPrice, -1);
+END;
+GO
 
